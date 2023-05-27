@@ -1,0 +1,1083 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>helloWorldDocs</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="helloWorldDocs.html">helloWorldDocs</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="abstract.html">hello world whitepaper v1.0</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="abstract.html"><strong aria-hidden="true">1.</strong> Abstract</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li class="chapter-item expanded "><a href="the-hello-world-platform.html"><strong aria-hidden="true">3.</strong> The hello world Platform</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ethereum.html"><strong aria-hidden="true">3.1.</strong> Ethereum</a></li><li class="chapter-item expanded "><a href="polygon.html"><strong aria-hidden="true">3.2.</strong> Polygon</a></li><li class="chapter-item expanded "><a href="the-hello-world-app.html"><strong aria-hidden="true">3.3.</strong> The hello world App</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="gpt.html"><strong aria-hidden="true">3.3.1.</strong> GPT</a></li><li class="chapter-item expanded "><a href="stable-diffusion.html"><strong aria-hidden="true">3.3.2.</strong> Stable Diffusion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="the-hello-world-user-experience.html"><strong aria-hidden="true">4.</strong> The hello world User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="minting-a-comment.html"><strong aria-hidden="true">4.1.</strong> Minting a COMMENT</a></li><li class="chapter-item expanded "><a href="upvoting-a-comment.html"><strong aria-hidden="true">4.2.</strong> Upvoting a COMMENT</a></li></ol></li><li class="chapter-item expanded "><a href="news-tokenomics.html"><strong aria-hidden="true">5.</strong> NEWS Tokenomics</a></li><li class="chapter-item expanded "><a href="links.html"><strong aria-hidden="true">6.</strong> Links</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">helloWorldDocs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <br>
+<br>
+<center><img src="/000.png"  width="360" height="180"></center>
+<center>welcome to hello world docs</center>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="abstract.html">
+        <div class="pagination-nav__sublabel">hello world</div>
+        <div class="pagination-nav__label">whitepaper</div>
+    </a>
+    <a class="pagination-nav__link next" href="links.html">
+        <div class="pagination-nav__sublabel">useful</div>
+        <div class="pagination-nav__label">Links </div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="helloWorldDocs.html">
+        <div class="pagination-nav__sublabel">more</div>
+        <div class="pagination-nav__label">soon...</div>
+    </a>
+    <a class="pagination-nav__link next" href="helloWorldDocs.html">
+        <div class="pagination-nav__sublabel">more</div>
+        <div class="pagination-nav__label">soon... </div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style><div style="break-before: page; page-break-before: always;"></div><h1 id="abstract"><a class="header" href="#abstract">Abstract</a></h1>
+<p>This whitepaper describes hello world, an AI-powered NFT game and social experiment centered around the way we experience, share and interact with the news and the world around us.</p>
+<p>In a world where news organizations compete for ad revenue with clickbait, half-truths and bias, polarizing viewers to breed brand loyalty, hello world primes a fresh, blank canvas for users to write the stories themselves.</p>
+<p>On-chain and censorship resistant, on hello world you <u>own what you say</u>. </p>
+<p><em>Hello world, hello free speech.</em></p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="helloWorldDocs.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< helloWorldDocs</div>
+    </a>
+    <a class="pagination-nav__link next" href="background.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Background ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="abstract-1"><a class="header" href="#abstract-1">Abstract</a></h1>
+<p>This whitepaper describes hello world, an AI-powered NFT game and social experiment centered around the way we experience, share and interact with the news and the world around us.</p>
+<p>In a world where news organizations compete for ad revenue with clickbait, half-truths and bias, polarizing viewers to breed brand loyalty, hello world primes a fresh, blank canvas for users to write the stories themselves.</p>
+<p>On-chain and censorship resistant, on hello world you <u>own what you say</u>. </p>
+<p><em>Hello world, hello free speech.</em></p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="helloWorldDocs.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< helloWorldDocs</div>
+    </a>
+    <a class="pagination-nav__link next" href="background.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Background ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="background"><a class="header" href="#background">Background</a></h1>
+<p>NFTs were first described, in principle if not by name, in Meni Rosenfeld’s 2012 “Overview of Colored Coins.” The paper described a protocol built atop Bitcoin that enabled the marking, or &quot;coloring&quot; of coins, for the purpose of establishing ownership or represent some real-world asset. <sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>The concept evolved over the next four years, mostly on early altcoin protocols Namecoin and Counterparty, before the definitive NFT implementation was made on Ethereum in 2017, and the modern era of NFTs was ushered in. <sup class="footnote-reference"><a href="#2">2</a></sup></p>
+<p>The first two Ethereum NFT series were deployed in 2017, CryptoPunks in June <sup class="footnote-reference"><a href="#3">3</a></sup> and CryptoKitties in October. <sup class="footnote-reference"><a href="#4">4</a></sup> Both were received well by the market, with sales figures briefly capturing mainstream news headlines. <sup class="footnote-reference"><a href="#5">5</a></sup> But the hype was short lived. As the 2017 crypto bull market turned into the 2018 bear, the buzz around crypto collectibles all but faded.</p>
+<p>While potential use-cases for NFTs expanded over the next few years, it wasn’t until 2021 that NFTs began to show true staying power as digital collectables. In 2021, NFT markets flourished. Aggregate NFT trading volume saw a more than 30,000% increase from 2020 year-over-year, from $82 million in 2020 to $25.1 billion in 2021. In 2022, despite mixed market conditions and sentiment, total organic NFT trading volume ended the year nearly even with 2021, with $24.7 billion in total. <sup class="footnote-reference"><a href="#6">6</a></sup> </p>
+<p>Social media giants began their entry into NFTs in 2021 and 2022, however confused their approaches sometimes seemed. In June of 2021, Twitter released a set of seven limited-edition Ethereum-based NFTs depicting various Twitter symbols, memes, and then-CEO Jack Dorsey’s first tweet. <sup class="footnote-reference"><a href="#7">7</a></sup> Reddit entered the NFT arena in June of 2021 with the auction of three Ethereum NFTs featuring its mascot “Snoo.” <sup class="footnote-reference"><a href="#8">8</a></sup> In May of 2022 Instagram launched a large-scale digital collectibles initiative to “Support Creators and Collectors in Showcasing their NFTs on Instagram.” <sup class="footnote-reference"><a href="#9">9</a></sup> </p>
+<p>While the social media giants of yesterday scramble to latch onto the NFT hype in some relevant way, we present a platform built around NFTs, where NFTs are native, and where you own what you say. 
+<br>
+<br>
+<br>
+<br></p>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="abstract.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Abstract</div>
+    </a>
+    <a class="pagination-nav__link next" href="the-hello-world-platform.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Platform ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://allquantor.at/blockchainbib/pdf/rosenfeld2012overview.pdf" target="_blank">https://allquantor.at/blockchainbib/pdf/rosenfeld2012overview.pdf</a></p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p><a href="https://www.zenofineart.com/blogs/news/the-beginning-of-nfts-a-brief-history-of-nft-art" target="_blank">https://www.zenofineart.com/blogs/news/the-beginning-of-nfts-a-brief-history-of-nft-art</a></p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p><a href="https://mashable.com/article/cryptopunks-ethereum-art-collectibles" target="_blank">https://mashable.com/article/cryptopunks-ethereum-art-collectibles</a> </p>
+</div>
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p><a href="https://www.bloomberg.com/press-releases/2017-10-17/cats-invade-world-s-largest-ethereum-hackathon" target="_blank">https://www.bloomberg.com/press-releases/2017-10-17/cats-invade-world-s-largest-ethereum-hackathon</a> </p>
+</div>
+<div class="footnote-definition" id="5"><sup class="footnote-definition-label">5</sup>
+<p><a href="https://techcrunch.com/2017/12/03/people-have-spent-over-1m-buying-virtual-cats-on-the-ethereum-blockchain/" target="_blank">https://techcrunch.com/2017/12/03/people-have-spent-over-1m-buying-virtual-cats-on-the-ethereum-blockchain/</a> </p>
+</div>
+<div class="footnote-definition" id="6"><sup class="footnote-definition-label">6</sup>
+<p><a href="https://decrypt.co/118438/2022-versus-2021-nft-sales" target="_blank">https://decrypt.co/118438/2022-versus-2021-nft-sales</a> </p>
+</div>
+<div class="footnote-definition" id="7"><sup class="footnote-definition-label">7</sup>
+<p><a href="https://www.theblockcrypto.com/post/110127/twitter-is-selling-140-ethereum-nfts-on-rarible" target="_blank">https://www.theblockcrypto.com/post/110127/twitter-is-selling-140-ethereum-nfts-on-rarible</a> </p>
+</div>
+<div class="footnote-definition" id="8"><sup class="footnote-definition-label">8</sup>
+<p><a href="https://www.theblockcrypto.com/post/109450/reddit-nfts-cryptosnoos-ethereum-opensea" target="_blank">https://www.theblockcrypto.com/post/109450/reddit-nfts-cryptosnoos-ethereum-opensea</a> </p>
+</div>
+<div class="footnote-definition" id="9"><sup class="footnote-definition-label">9</sup>
+<p><a href="https://about.instagram.com/blog/announcements/instagram-digital-collectibles" target="_blank">https://about.instagram.com/blog/announcements/instagram-digital-collectibles</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-platform"><a class="header" href="#the-hello-world-platform">The hello world Platform</a></h1>
+<p>The hello world platform is native on both Ethereum and Polygon, leveraging each protocol’s strongpoints seamlessly.</p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="background.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Background</div>
+    </a>
+    <a class="pagination-nav__link next" href="ethereum.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Ethereum ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ethereum"><a class="header" href="#ethereum">Ethereum</a></h1>
+<p>NEWS is hello world’s native ERC-20 token, issued on Ethereum, where the vast majority of liquidity exists and the vast majority of trading activity occurs.</p>
+<p>NEWS <code>(will be)</code> initially listed on Uniswap v2.</p>
+<p>NEWS token contract: <code>0x0000000000000000000000000000000000000000</code></p>
+<p>Uniswap v2 NEWS/WETH contract: <code>0x0000000000000000000000000000000000000000</code></p>
+<br>
+<pre><code>// This is a placeholder contract
+// This is not the NEWS contract
+
+// contracts/NEWSToken.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import &quot;@openzeppelin/contracts/token/ERC20/ERC20.sol&quot;;
+
+contract NEWSToken is ERC20 {
+    constructor(uint256 initialSupply) public ERC20(&quot;News&quot;, &quot;NEWS&quot;) {
+        _mint(msg.sender, initialSupply);
+    }
+}
+
+</code></pre>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="the-hello-world-platform.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Platform</div>
+    </a>
+    <a class="pagination-nav__link next" href="polygon.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Polygon ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polygon"><a class="header" href="#polygon">Polygon</a></h1>
+<p>HEADLINE and COMMENT NFTs are hello world’s two ERC-721 tokens, issued on Polygon’s PoS sidechain, the most widely used Ethereum scaling ecosystem.</p>
+<p>Polygon PoS offers EVM-compatibility and a superior user experience compared to Ethereum, with faster transactions and near-zero gas fees.</p>
+<p>HEADLINE and COMMENT NFTs can be traded on any of the number of NFT marketplaces that support Polygon, and can be bridged to Ethereum via Polygon’s trustless two-way bridge and listed on any Ethereum NFT marketplace. <sup class="footnote-reference"><a href="#10">1</a></sup></p>
+<h4 id="erc721-headline-contract"><a class="header" href="#erc721-headline-contract">ERC721 HEADLINE Contract</a></h4>
+<pre><code>// This is a placeholder contract
+// This is not the HEADLINE contract
+
+// contracts/HEADLINE.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;
+import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;
+
+contract GameItem is ERC721 {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    constructor() public ERC721(&quot;GameItem&quot;, &quot;ITM&quot;) {}
+
+    function awardItem(address player, string memory tokenURI)
+        public
+        returns (uint256)
+    {
+        _tokenIds.increment();
+
+        uint256 newItemId = _tokenIds.current();
+        _mint(player, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
+}
+</code></pre>
+<h4 id="erc721-comment-contract"><a class="header" href="#erc721-comment-contract">ERC721 COMMENT Contract</a></h4>
+<pre><code>// This is a placeholder contract
+// This is not the COMMENT contract
+
+// contracts/COMMENT.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;
+import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;
+
+contract GameItem is ERC721 {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    constructor() public ERC721(&quot;GameItem&quot;, &quot;ITM&quot;) {}
+
+    function awardItem(address player, string memory tokenURI)
+        public
+        returns (uint256)
+    {
+        _tokenIds.increment();
+
+        uint256 newItemId = _tokenIds.current();
+        _mint(player, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
+}
+
+</code></pre>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="ethereum.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Ethereum</div>
+    </a>
+    <a class="pagination-nav__link next" href="the-hello-world-app.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">App ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-app"><a class="header" href="#the-hello-world-app">The hello world App</a></h1>
+<p>The hello world app leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.</p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="polygon.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Polygon</div>
+    </a>
+    <a class="pagination-nav__link next" href="gpt.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">GPT ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gpt"><a class="header" href="#gpt">GPT</a></h1>
+<p>HEADLINE NFT text content is generated using OpenAI’s Generative Pre-trained Transformer (GPT), a multimodal large language model (LLM) trained using large text data sets and fine-tuned with reinforcement learning from human and AI feedback, and has the ability to generate novel, human-like content. <sup class="footnote-reference"><a href="#11">1</a></sup></p>
+<p>Once a day, hello world’s GPT agent retrieves and processes headlines from a vast number of world news sources, then generates ten unique headlines to be minted as HEADLINE NFTs.
+<br>
+<br>
+<br>
+<br></p>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="the-hello-world-app.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< App</div>
+    </a>
+    <a class="pagination-nav__link next" href="stable-diffusion.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Stable Diffusion ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="11"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank">https://cdn.openai.com/papers/gpt-4.pdf</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stable-diffusion"><a class="header" href="#stable-diffusion">Stable Diffusion</a></h1>
+<p>HEADLINE NFT images and COMMENT NFT images (when applicable) are generated using Stable Diffusion, a deep learning, text-to-image  latent diffusion model developed by Stability AI, which has the ability to generate detailed images conditioned on text descriptions. <sup class="footnote-reference"><a href="#12">1</a></sup></p>
+<p>An image is generated from each headline prompt and minted onto the headline NFT. </p>
+<p>Additionally, when a user mints a COMMENT NFT they have the option to either use their own image, or use an image generated by the AI from a text prompt containing their comment.
+<br>
+<br>
+<br>
+<br></p>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="gpt.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< GPT</div>
+    </a>
+    <a class="pagination-nav__link next" href="the-hello-world-user-experience.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">UX ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="12"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://stability.ai/blog/stablediffusion2-1-release7-dec-2022" target="_blank">https://stability.ai/blog/stablediffusion2-1-release7-dec-2022</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-user-experience"><a class="header" href="#the-hello-world-user-experience">The hello world User Experience</a></h1>
+<p>The hello world user experience is simple and intuitive for any user, with a familiar imageboard layout and Web3 integration. </p>
+<p>If you’ve posted on 4chan and used MetaMask, interacting with the hello world app is second nature.</p>
+<h1 id=""><a class="header" href="#"></a></h1>
+<p><img src="001.png" alt="" /></p>
+<h1 id="-1"><a class="header" href="#-1"></a></h1>
+<p>Users can view the day’s headlines, each a HEADLINE NFT and AI-generated thumbnail, on the app’s main page. </p>
+<p>To view the COMMENTs minted on a headline, simply click the headline and view the thread. </p>
+<h1 id="-2"><a class="header" href="#-2"></a></h1>
+<p><img src="002.png" alt="" /></p>
+<h1 id="-3"><a class="header" href="#-3"></a></h1>
+<p>There are initially two ways users can interact with a thread, by minting a COMMENT and by upvoting a COMMENT. Both interactions require the user to burn NEWS tokens.</p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="stable-diffusion.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Stable Diffusion</div>
+    </a>
+    <a class="pagination-nav__link next" href="minting-a-comment.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Mint COMMENT ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style><div style="break-before: page; page-break-before: always;"></div><h1 id="minting-a-comment"><a class="header" href="#minting-a-comment">Minting a COMMENT</a></h1>
+<p>Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent in-app are burned on-chain. </p>
+<p>To reply on a thread and mint a COMMENT NFT, make sure your Web3 wallet is connected, then click Comment and enter your reply. </p>
+<p>Users have the option to add a post image of their choice, have the AI generate an image from their text, or post the comment with no image. </p>
+<p>When you’re satisfied with your post, click Mint Comment and approve the mint transaction in your Web3 wallet. COMMENT NFTs are minted to the commenter’s address, and are owned by the commenter. They are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#13">1</a></sup>
+<br>
+<br>
+<br>
+<br></p>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="the-hello-world-user-experience.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< UX</div>
+    </a>
+    <a class="pagination-nav__link next" href="upvoting-a-comment.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Upvote a COMMENT ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="13"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="upvoting-a-comment"><a class="header" href="#upvoting-a-comment">Upvoting a COMMENT</a></h1>
+<p>Upvotes cost 1 NEWS per upvote. All NEWS tokens spent in-app are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.</p>
+<p>The COMMENT on each HEADLINE that has the most upvotes at the end of each 24-hour period is awarded the HEADLINE NFT the COMMENT was minted on. </p>
+<p>HEADLINE NFTs are unique, 1-of-1, AI-generated real-world international news headlines. Each HEADLINE NFT contains a unique AI-generated image which, unlike most NFTs, is contained on the NFT and stored on the blockchain.</p>
+<p>HEADLINE NFTs are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#14">1</a></sup><br />
+<br>
+<br>
+<br>
+<br></p>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="minting-a-comment.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Mint COMMENT</div>
+    </a>
+    <a class="pagination-nav__link next" href="news-tokenomics.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Tokenomics ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+<br>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="14"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="news-tokenomics"><a class="header" href="#news-tokenomics">NEWS Tokenomics</a></h1>
+<p>NEWS token has a total supply of 1 billion tokens.</p>
+<br>
+<pre><code>// Token allocation TBA
+
+
+
+
+
+
+
+
+
+</code></pre>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="upvoting-a-comment.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Upvote COMMENT</div>
+    </a>
+    <a class="pagination-nav__link next" href="links.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Links ></div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style><div style="break-before: page; page-break-before: always;"></div><h1 id="links"><a class="header" href="#links">Links</a></h1>
+<p>Twitter: <a href="https://twitter.com/helloWorldNft">https://twitter.com/helloWorldNft</a></p>
+<p>Telegram: <a href="https://t.me/helloWorldNft">https://t.me/helloWorldNft</a></p>
+<p>Medium: <a href="https://medium.com/@helloWorldNft">https://medium.com/@helloWorldNft</a></p>
+<p>GitHub: <a href="https://github.com/helloWorldNft">https://github.com/helloWorldNft</a></p>
+<p>Contact: <a href="mailto:hello@helloworld.news">hello@helloworld.news</a></p>
+<br>
+<br>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="news-tokenomics.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Tokenomics</div>
+    </a>
+    <a class="pagination-nav__link next" href="helloWorldDocs.html">
+        <div class="pagination-nav__sublabel">Home</div>
+        <div class="pagination-nav__label">helloWorldDocs </div>
+    </a>
+</div>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+</style>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
