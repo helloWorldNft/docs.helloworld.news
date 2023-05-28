@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js navy">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -36,7 +36,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -62,7 +62,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('navy')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -118,6 +118,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/helloWorldNft/docs.helloworld.news" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -145,6 +148,47 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="polygon"><a class="header" href="#polygon">Polygon</a></h1>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
 <p>HEADLINE and COMMENT NFTs are hello world’s two ERC-721 tokens, issued on Polygon’s PoS sidechain, the most widely used Ethereum scaling ecosystem.</p>
 <p>Polygon PoS offers EVM-compatibility and a superior user experience compared to Ethereum, with faster transactions and near-zero gas fees.</p>
 <p>HEADLINE and COMMENT NFTs can be traded on any of the number of NFT marketplaces that support Polygon, and can be bridged to Ethereum via Polygon’s trustless two-way bridge and listed on any Ethereum NFT marketplace. <sup class="footnote-reference"><a href="#10">1</a></sup></p>
@@ -224,34 +268,6 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">App ></div>
     </a>
 </div>
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
 <br>
 <br>
 <hr />

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js navy">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -37,7 +37,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -63,7 +63,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('navy')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -119,6 +119,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/helloWorldNft/docs.helloworld.news" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -145,7 +148,48 @@
 
                 <div id="content" class="content">
                     <main>
-                        <br>
+                        <style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
+<br>
 <br>
 <center><img src="/000.png"  width="360" height="180"></center>
 <center>welcome to hello world docs</center>
@@ -162,50 +206,21 @@
         <div class="pagination-nav__label">Links </div>
     </a>
 </div>
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 100px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
-<br>
 <div class="pagination-nav">
     <a class="pagination-nav__link prev" href="helloWorldDocs.html">
         <div class="pagination-nav__sublabel">more</div>
         <div class="pagination-nav__label">soon...</div>
     </a>
-    <a class="pagination-nav__link next" href="helloWorldDocs.html">
+    <a class="pagination-nav__link prev" href="helloWorldDocs.html">
         <div class="pagination-nav__sublabel">more</div>
-        <div class="pagination-nav__label">soon... </div>
+        <div class="pagination-nav__label">soon...</div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="abstract"><a class="header" href="#abstract">Abstract</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 100px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -219,6 +234,7 @@
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -228,7 +244,19 @@
     .pagination-nav__label {
         font-size: 1.2em;
     }
-</style><div style="break-before: page; page-break-before: always;"></div><h1 id="abstract"><a class="header" href="#abstract">Abstract</a></h1>
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
 <p>This whitepaper describes hello world, an AI-powered NFT game and social experiment centered around the way we experience, share and interact with the news and the world around us.</p>
 <p>In a world where news organizations compete for ad revenue with clickbait, half-truths and bias, polarizing viewers to breed brand loyalty, hello world primes a fresh, blank canvas for users to write the stories themselves.</p>
 <p>On-chain and censorship resistant, on hello world you <u>own what you say</u>. </p>
@@ -245,12 +273,12 @@
         <div class="pagination-nav__sublabel">Next</div>
         <div class="pagination-nav__label">Background ></div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="abstract-1"><a class="header" href="#abstract-1">Abstract</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -264,6 +292,7 @@
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -273,8 +302,19 @@
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="abstract-1"><a class="header" href="#abstract-1">Abstract</a></h1>
 <p>This whitepaper describes hello world, an AI-powered NFT game and social experiment centered around the way we experience, share and interact with the news and the world around us.</p>
 <p>In a world where news organizations compete for ad revenue with clickbait, half-truths and bias, polarizing viewers to breed brand loyalty, hello world primes a fresh, blank canvas for users to write the stories themselves.</p>
 <p>On-chain and censorship resistant, on hello world you <u>own what you say</u>. </p>
@@ -291,12 +331,12 @@
         <div class="pagination-nav__sublabel">Next</div>
         <div class="pagination-nav__label">Background ></div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="background"><a class="header" href="#background">Background</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -310,6 +350,7 @@
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -319,8 +360,19 @@
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="background"><a class="header" href="#background">Background</a></h1>
 <p>NFTs were first described, in principle if not by name, in Meni Rosenfeld’s 2012 “Overview of Colored Coins.” The paper described a protocol built atop Bitcoin that enabled the marking, or &quot;coloring&quot; of coins, for the purpose of establishing ownership or represent some real-world asset. <sup class="footnote-reference"><a href="#1">1</a></sup></p>
 <p>The concept evolved over the next four years, mostly on early altcoin protocols Namecoin and Counterparty, before the definitive NFT implementation was made on Ethereum in 2017, and the modern era of NFTs was ushered in. <sup class="footnote-reference"><a href="#2">2</a></sup></p>
 <p>The first two Ethereum NFT series were deployed in 2017, CryptoPunks in June <sup class="footnote-reference"><a href="#3">3</a></sup> and CryptoKitties in October. <sup class="footnote-reference"><a href="#4">4</a></sup> Both were received well by the market, with sales figures briefly capturing mainstream news headlines. <sup class="footnote-reference"><a href="#5">5</a></sup> But the hype was short lived. As the 2017 crypto bull market turned into the 2018 bear, the buzz around crypto collectibles all but faded.</p>
@@ -341,34 +393,6 @@
         <div class="pagination-nav__label">Platform ></div>
     </a>
 </div>
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
 <br>
 <br>
 <hr />
@@ -400,25 +424,11 @@
 <p><a href="https://about.instagram.com/blog/announcements/instagram-digital-collectibles" target="_blank">https://about.instagram.com/blog/announcements/instagram-digital-collectibles</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-platform"><a class="header" href="#the-hello-world-platform">The hello world Platform</a></h1>
-<p>The hello world platform is native on both Ethereum and Polygon, leveraging each protocol’s strongpoints seamlessly.</p>
-<br>
-<br>
-<br>
-<div class="pagination-nav">
-    <a class="pagination-nav__link prev" href="background.html">
-        <div class="pagination-nav__sublabel">Previous</div>
-        <div class="pagination-nav__label">< Background</div>
-    </a>
-    <a class="pagination-nav__link next" href="ethereum.html">
-        <div class="pagination-nav__sublabel">Next</div>
-        <div class="pagination-nav__label">Ethereum ></div>
-    </a>
-</div>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -432,6 +442,7 @@
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -441,10 +452,74 @@
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
+<p>The hello world platform is native on both Ethereum and Polygon, leveraging each protocol’s strongpoints seamlessly.</p>
 <br>
 <br>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ethereum"><a class="header" href="#ethereum">Ethereum</a></h1>
+<br>
+<div class="pagination-nav">
+    <a class="pagination-nav__link prev" href="background.html">
+        <div class="pagination-nav__sublabel">Previous</div>
+        <div class="pagination-nav__label">< Background</div>
+    </a>
+    <a class="pagination-nav__link next" href="ethereum.html">
+        <div class="pagination-nav__sublabel">Next</div>
+        <div class="pagination-nav__label">Ethereum ></div>
+    </a>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="ethereum"><a class="header" href="#ethereum">Ethereum</a></h1>
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
 <p>NEWS is hello world’s native ERC-20 token, issued on Ethereum, where the vast majority of liquidity exists and the vast majority of trading activity occurs.</p>
 <p>NEWS <code>(will be)</code> initially listed on Uniswap v2.</p>
 <p>NEWS token contract: <code>0x0000000000000000000000000000000000000000</code></p>
@@ -478,12 +553,12 @@ contract NEWSToken is ERC20 {
         <div class="pagination-nav__sublabel">Next</div>
         <div class="pagination-nav__label">Polygon ></div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="polygon"><a class="header" href="#polygon">Polygon</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -497,6 +572,7 @@ contract NEWSToken is ERC20 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -506,10 +582,19 @@ contract NEWSToken is ERC20 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="polygon"><a class="header" href="#polygon">Polygon</a></h1>
 <p>HEADLINE and COMMENT NFTs are hello world’s two ERC-721 tokens, issued on Polygon’s PoS sidechain, the most widely used Ethereum scaling ecosystem.</p>
 <p>Polygon PoS offers EVM-compatibility and a superior user experience compared to Ethereum, with faster transactions and near-zero gas fees.</p>
 <p>HEADLINE and COMMENT NFTs can be traded on any of the number of NFT marketplaces that support Polygon, and can be bridged to Ethereum via Polygon’s trustless two-way bridge and listed on any Ethereum NFT marketplace. <sup class="footnote-reference"><a href="#10">1</a></sup></p>
@@ -589,11 +674,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">App ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-app"><a class="header" href="#the-hello-world-app">The hello world App</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -607,6 +699,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -616,14 +709,19 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-app"><a class="header" href="#the-hello-world-app">The hello world App</a></h1>
 <p>The hello world app leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.</p>
 <br>
 <br>
@@ -638,11 +736,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">GPT ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gpt"><a class="header" href="#gpt">GPT</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -656,6 +761,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -665,17 +771,21 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="gpt"><a class="header" href="#gpt">GPT</a></h1>
 <p>HEADLINE NFT text content is generated using OpenAI’s Generative Pre-trained Transformer (GPT), a multimodal large language model (LLM) trained using large text data sets and fine-tuned with reinforcement learning from human and AI feedback, and has the ability to generate novel, human-like content. <sup class="footnote-reference"><a href="#11">1</a></sup></p>
 <p>Once a day, hello world’s GPT agent retrieves and processes headlines from a vast number of world news sources, then generates ten unique headlines to be minted as HEADLINE NFTs.
-<br>
 <br>
 <br>
 <br></p>
@@ -689,11 +799,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">Stable Diffusion ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="11"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank">https://cdn.openai.com/papers/gpt-4.pdf</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stable-diffusion"><a class="header" href="#stable-diffusion">Stable Diffusion</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -707,6 +824,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -716,21 +834,25 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="11"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank">https://cdn.openai.com/papers/gpt-4.pdf</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="stable-diffusion"><a class="header" href="#stable-diffusion">Stable Diffusion</a></h1>
 <p>HEADLINE NFT images and COMMENT NFT images (when applicable) are generated using Stable Diffusion, a deep learning, text-to-image  latent diffusion model developed by Stability AI, which has the ability to generate detailed images conditioned on text descriptions. <sup class="footnote-reference"><a href="#12">1</a></sup></p>
 <p>An image is generated from each headline prompt and minted onto the headline NFT. </p>
-<p>Additionally, when a user mints a COMMENT NFT they have the option to either use their own image, or use an image generated by the AI from a text prompt containing their comment.
+<p>Additionally, when a user mints a COMMENT NFT they have the option to either use their own image, or use an image generated by the AI from a text prompt containing their comment.</p>
 <br>
 <br>
 <br>
-<br></p>
 <div class="pagination-nav">
     <a class="pagination-nav__link prev" href="gpt.html">
         <div class="pagination-nav__sublabel">Previous</div>
@@ -741,11 +863,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">UX ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="12"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://stability.ai/blog/stablediffusion2-1-release7-dec-2022" target="_blank">https://stability.ai/blog/stablediffusion2-1-release7-dec-2022</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-user-experience"><a class="header" href="#the-hello-world-user-experience">The hello world User Experience</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -759,6 +888,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -768,15 +898,19 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="12"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://stability.ai/blog/stablediffusion2-1-release7-dec-2022" target="_blank">https://stability.ai/blog/stablediffusion2-1-release7-dec-2022</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-user-experience"><a class="header" href="#the-hello-world-user-experience">The hello world User Experience</a></h1>
 <p>The hello world user experience is simple and intuitive for any user, with a familiar imageboard layout and Web3 integration. </p>
 <p>If you’ve posted on 4chan and used MetaMask, interacting with the hello world app is second nature.</p>
 <h1 id=""><a class="header" href="#"></a></h1>
@@ -800,12 +934,12 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__sublabel">Next</div>
         <div class="pagination-nav__label">Mint COMMENT ></div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="minting-a-comment"><a class="header" href="#minting-a-comment">Minting a COMMENT</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -819,6 +953,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -828,15 +963,26 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
-</style><div style="break-before: page; page-break-before: always;"></div><h1 id="minting-a-comment"><a class="header" href="#minting-a-comment">Minting a COMMENT</a></h1>
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
 <p>Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent in-app are burned on-chain. </p>
 <p>To reply on a thread and mint a COMMENT NFT, make sure your Web3 wallet is connected, then click Comment and enter your reply. </p>
 <p>Users have the option to add a post image of their choice, have the AI generate an image from their text, or post the comment with no image. </p>
-<p>When you’re satisfied with your post, click Mint Comment and approve the mint transaction in your Web3 wallet. COMMENT NFTs are minted to the commenter’s address, and are owned by the commenter. They are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#13">1</a></sup>
+<p>When you’re satisfied with your post, click Mint Comment and approve the mint transaction in your Web3 wallet. COMMENT NFTs are minted to the commenter’s address, and are owned by the commenter. They are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#13">1</a></sup></p>
 <br>
 <br>
 <br>
-<br></p>
 <div class="pagination-nav">
     <a class="pagination-nav__link prev" href="the-hello-world-user-experience.html">
         <div class="pagination-nav__sublabel">Previous</div>
@@ -847,11 +993,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">Upvote a COMMENT ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="13"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="upvoting-a-comment"><a class="header" href="#upvoting-a-comment">Upvoting a COMMENT</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -865,6 +1018,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -874,23 +1028,26 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="13"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="upvoting-a-comment"><a class="header" href="#upvoting-a-comment">Upvoting a COMMENT</a></h1>
 <p>Upvotes cost 1 NEWS per upvote. All NEWS tokens spent in-app are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.</p>
 <p>The COMMENT on each HEADLINE that has the most upvotes at the end of each 24-hour period is awarded the HEADLINE NFT the COMMENT was minted on. </p>
 <p>HEADLINE NFTs are unique, 1-of-1, AI-generated real-world international news headlines. Each HEADLINE NFT contains a unique AI-generated image which, unlike most NFTs, is contained on the NFT and stored on the blockchain.</p>
-<p>HEADLINE NFTs are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#14">1</a></sup><br />
+<p>HEADLINE NFTs are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#14">1</a></sup></p>
 <br>
 <br>
 <br>
-<br></p>
 <div class="pagination-nav">
     <a class="pagination-nav__link prev" href="minting-a-comment.html">
         <div class="pagination-nav__sublabel">Previous</div>
@@ -901,11 +1058,18 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">Tokenomics ></div>
     </a>
 </div>
+<br>
+<br>
+<hr />
+<div class="footnote-definition" id="14"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="news-tokenomics"><a class="header" href="#news-tokenomics">NEWS Tokenomics</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -919,6 +1083,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -928,15 +1093,19 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
 </style>
-<br>
-<br>
-<br>
-<hr />
-<div class="footnote-definition" id="14"><sup class="footnote-definition-label">1</sup>
-<p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
-</div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="news-tokenomics"><a class="header" href="#news-tokenomics">NEWS Tokenomics</a></h1>
 <p>NEWS token has a total supply of 1 billion tokens.</p>
 <br>
 <pre><code>// Token allocation TBA
@@ -962,12 +1131,12 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__sublabel">Next</div>
         <div class="pagination-nav__label">Links ></div>
     </a>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="links"><a class="header" href="#links">Links</a></h1>
 <style>
     .pagination-nav {
         display: flex;
         justify-content: center;
-        gap: 200px;
+        flex-wrap: wrap;
     }
 
     .pagination-nav__link {
@@ -981,6 +1150,7 @@ contract GameItem is ERC721 {
         border: 1px solid #bcbdd0;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .pagination-nav__sublabel {
@@ -990,7 +1160,19 @@ contract GameItem is ERC721 {
     .pagination-nav__label {
         font-size: 1.2em;
     }
-</style><div style="break-before: page; page-break-before: always;"></div><h1 id="links"><a class="header" href="#links">Links</a></h1>
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
 <p>Twitter: <a href="https://twitter.com/helloWorldNft">https://twitter.com/helloWorldNft</a></p>
 <p>Telegram: <a href="https://t.me/helloWorldNft">https://t.me/helloWorldNft</a></p>
 <p>Medium: <a href="https://medium.com/@helloWorldNft">https://medium.com/@helloWorldNft</a></p>
@@ -1009,34 +1191,6 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">helloWorldDocs </div>
     </a>
 </div>
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

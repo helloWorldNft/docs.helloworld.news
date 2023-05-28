@@ -1,5 +1,47 @@
 # Polygon
 
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
+
 HEADLINE and COMMENT NFTs are hello world’s two ERC-721 tokens, issued on Polygon’s PoS sidechain, the most widely used Ethereum scaling ecosystem.  
 
 Polygon PoS offers EVM-compatibility and a superior user experience compared to Ethereum, with faster transactions and near-zero gas fees.  
@@ -74,8 +116,6 @@ contract GameItem is ERC721 {
 
 ````
 
-
-
 <br>
 <br>
 <br>
@@ -91,35 +131,6 @@ contract GameItem is ERC721 {
         <div class="pagination-nav__label">App ></div>
     </a>
 </div>
-
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
 
 <br>
 <br>

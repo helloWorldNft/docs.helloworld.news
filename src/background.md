@@ -1,5 +1,47 @@
 # Background
 
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-nav__link {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        background: transparent;
+        color: black;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #bcbdd0;
+        border-radius: 4px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .pagination-nav__sublabel {
+        font-size: 0.8em;
+    }
+
+    .pagination-nav__label {
+        font-size: 1.2em;
+    }
+
+    @media screen and (min-width: 769px) {
+        .pagination-nav {
+            gap: 100px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .pagination-nav__link {
+            width: 100%;
+        }
+    }
+</style>
+
 NFTs were first described, in principle if not by name, in Meni Rosenfeld’s 2012 “Overview of Colored Coins.” The paper described a protocol built atop Bitcoin that enabled the marking, or "coloring" of coins, for the purpose of establishing ownership or represent some real-world asset. [^1]
 
 The concept evolved over the next four years, mostly on early altcoin protocols Namecoin and Counterparty, before the definitive NFT implementation was made on Ethereum in 2017, and the modern era of NFTs was ushered in. [^2]
@@ -27,35 +69,6 @@ While the social media giants of yesterday scramble to latch onto the NFT hype i
         <div class="pagination-nav__label">Platform ></div>
     </a>
 </div>
-
-<style>
-    .pagination-nav {
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-
-    .pagination-nav__link {
-        display: inline-block;
-        padding: 20px;
-        text-decoration: none;
-        background: transparent;
-        color: black;
-        width: 250px;
-        height: 50px;
-        border: 1px solid #bcbdd0;
-        border-radius: 4px;
-        text-align: center;
-    }
-
-    .pagination-nav__sublabel {
-        font-size: 0.8em;
-    }
-
-    .pagination-nav__label {
-        font-size: 1.2em;
-    }
-</style>
 
 <br>
 <br>
