@@ -193,64 +193,270 @@
 <p>Polygon PoS offers EVM-compatibility and a superior user experience compared to Ethereum, with faster transactions and near-zero gas fees.</p>
 <p>HEADLINE and COMMENT NFTs can be traded on any of the number of NFT marketplaces that support Polygon, and can be bridged to Ethereum via Polygon’s trustless two-way bridge and listed on any Ethereum NFT marketplace. <sup class="footnote-reference"><a href="#10">1</a></sup></p>
 <h4 id="erc721-headline-contract"><a class="header" href="#erc721-headline-contract">ERC721 HEADLINE Contract</a></h4>
-<pre><code>// This is a placeholder contract
-// This is not the HEADLINE contract
-
-// contracts/HEADLINE.sol
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+<pre><code>//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol&quot;;
 import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;
+import &quot;@openzeppelin/contracts/access/Ownable.sol&quot;;
 
-contract GameItem is ERC721 {
+/**
+ * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
+ * the Metadata extension and the ERC721Enumerable extension and ERC721URIStorage extension.
+ *
+ */
+contract Headline is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
+
     Counters.Counter private _tokenIds;
 
-    constructor() public ERC721(&quot;GameItem&quot;, &quot;ITM&quot;) {}
+    constructor() ERC721(&quot;Helloworld.news&quot;, &quot;HEADLINE&quot;) {}
 
-    function awardItem(address player, string memory tokenURI)
-        public
-        returns (uint256)
-    {
+    /**
+     * @dev List all tokens owned by a single user
+     *
+     *
+     */
+
+    function tokensOfOwner(address _owner) external view returns (uint256[] memory) {
+        uint256 tokenCount = balanceOf(_owner);
+        if (tokenCount == 0) {
+            // Return an empty array
+            return new uint256[](0);
+        } else {
+            uint256[] memory result = new uint256[](tokenCount);
+            uint256 index;
+            for (index = 0; index &lt; tokenCount; index++) {
+                result[index] = tokenOfOwnerByIndex(_owner, index);
+            }
+            return result;
+        }
+    }
+
+    /**
+     * @dev Mint a new headline to a user
+     *
+     * Requirements:
+     *
+     * - Caller must be owner.
+     *
+     *
+     */
+
+    function newHeadline(address _owner, string memory Info) public onlyOwner returns (uint256) {
         _tokenIds.increment();
 
-        uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        uint256 newId = _tokenIds.current();
+        _mint(_owner, newId);
+        _setTokenURI(newId, Info);
 
-        return newItemId;
+        return newId;
+    }
+
+    // The following functions are overrides required by Solidity.
+
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
+        internal
+        override(ERC721, ERC721Enumerable)
+    {
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
+    }
+
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
+    }
+
+    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        return super.tokenURI(tokenId);
+    }
+
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721Enumerable) returns (bool) {
+        return super.supportsInterface(interfaceId);
     }
 }
+
 </code></pre>
 <h4 id="erc721-comment-contract"><a class="header" href="#erc721-comment-contract">ERC721 COMMENT Contract</a></h4>
-<pre><code>// This is a placeholder contract
-// This is not the COMMENT contract
-
-// contracts/COMMENT.sol
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+<pre><code>//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol&quot;;
 import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;
+import &quot;@openzeppelin/contracts/access/Ownable.sol&quot;;
 
-contract GameItem is ERC721 {
+/**
+ * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
+ * the Metadata extension and the ERC721Enumerable extension and ERC721URIStorage extension.
+ *
+ */
+contract CommentNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
+
     Counters.Counter private _tokenIds;
 
-    constructor() public ERC721(&quot;GameItem&quot;, &quot;ITM&quot;) {}
+    constructor() ERC721(&quot;Helloworld.news&quot;, &quot;Comment&quot;) {}
 
-    function awardItem(address player, string memory tokenURI)
-        public
-        returns (uint256)
-    {
+    /**
+     * @dev List all tokens owned by a single user
+     *
+     *
+     */
+
+    function tokensOfOwner(address _owner) external view returns (uint256[] memory) {
+        uint256 tokenCount = balanceOf(_owner);
+        if (tokenCount == 0) {
+            // Return an empty array
+            return new uint256[](0);
+        } else {
+            uint256[] memory result = new uint256[](tokenCount);
+            uint256 index;
+            for (index = 0; index &lt; tokenCount; index++) {
+                result[index] = tokenOfOwnerByIndex(_owner, index);
+            }
+            return result;
+        }
+    }
+
+    /**
+     * @dev Mint a new headline to a user
+     *
+     * Requirements:
+     *
+     * - Caller must be owner.
+     *
+     *
+     */
+
+    function newComment(address _owner, string memory Info) public onlyOwner returns (uint256) {
         _tokenIds.increment();
 
-        uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        uint256 newId = _tokenIds.current();
+        _mint(_owner, newId);
+        _setTokenURI(newId, Info);
 
-        return newItemId;
+        return newId;
+    }
+
+    // The following functions are overrides required by Solidity.
+
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
+        internal
+        override(ERC721, ERC721Enumerable)
+    {
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
+    }
+
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
+    }
+
+    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        return super.tokenURI(tokenId);
+    }
+
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721Enumerable) returns (bool) {
+        return super.supportsInterface(interfaceId);
+    }
+}
+
+</code></pre>
+<h4 id="newsmaker-contract"><a class="header" href="#newsmaker-contract">newsMaker Contract</a></h4>
+<p>The newsMaker contract handles various functions for the hello world app.</p>
+<pre><code>//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/AccessControl.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC721/IERC721.sol&quot;;
+import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;
+import &quot;./headline.sol&quot;;
+import &quot;./commentNFT.sol&quot;;
+
+/**
+ * @dev newsMaker vault for managing the discussions.
+ *
+ */
+contract newsMaker is AccessControl {
+    using Counters for Counters.Counter;
+
+    bytes32 public constant MINTER_ROLE = keccak256(&quot;can_mint&quot;);
+    bytes32 public constant CREDIT_ROLE = keccak256(&quot;can_credit&quot;);
+    Headline public headline;
+    CommentNFT public commentNFT;
+    uint256 public maxAmount;
+    Counters.Counter private _commentIds;
+
+    struct Discussion {
+        uint256 expiry;
+        uint256 outcome;
+        uint256 maxUpdoot;
+    }
+
+    struct Comment {
+        address owner;
+        string opinion;
+        uint256 discussion;
+    }
+
+    mapping(uint256 =&gt; Discussion) public discussions;
+    mapping(uint256 =&gt; uint256) public updoots;
+    mapping(uint256 =&gt; Comment) public comments;
+    mapping(address =&gt; uint256) public credits;
+
+    event Commented(uint256 indexed id, uint256 indexed commentId);
+    event discussionStarted(uint256 indexed id, uint256 _expiry);
+
+    /**
+     * @dev Initializes the contract by setting the `headline` and the `comment` contract addresses.
+     */
+    constructor(address _headline, address _comment) {
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _setupRole(MINTER_ROLE, msg.sender);
+        _setupRole(CREDIT_ROLE, msg.sender);
+        headline = Headline(_headline);
+        commentNFT = CommentNFT(_comment);
+    }
+
+    function grantCredit(address user, uint256 amount) public onlyRole(CREDIT_ROLE) {
+        credits[user] += amount;
+    }
+
+    function startDiscussion(string memory _uri, uint256 _expiry) public onlyRole(MINTER_ROLE) {
+        uint256 id = headline.newHeadline(address(this), _uri);
+        discussions[id] = Discussion(_expiry, 0, 0);
+        emit discussionStarted(id, _expiry);
+    }
+
+    function addComment(uint256 _discussion, string memory _opinion) public returns (uint256 _commentId) {
+        Discussion memory d = discussions[_discussion];
+        require(d.expiry &gt; block.timestamp, &quot;commentining isn't allowed&quot;);
+        _commentIds.increment();
+
+        comments[_commentIds.current()] = Comment(msg.sender, _opinion, _discussion);
+        emit Commented(_discussion, _commentIds.current());
+        _commentId = _commentIds.current();
+    }
+
+    function mintComment(uint256 _discussion) public {
+        Discussion memory d = discussions[_discussion];
+        Comment memory c = comments[d.maxUpdoot];
+        require(msg.sender == c.owner, &quot;can't mint a comment that isn't yours&quot;);
+        commentNFT.newComment(c.owner, c.opinion);
+    }
+
+    function updootComment(uint256 _comment, uint256 amount) public {
+        require(credits[msg.sender] &gt;= amount, &quot;not enought credits&quot;);
+        Comment storage c = comments[_comment];
+        Discussion storage d = discussions[c.discussion];
+        require(d.expiry &gt; block.timestamp, &quot;discussion has ended&quot;);
+        updoots[_comment] += amount;
+        if (updoots[_comment] &gt; updoots[d.maxUpdoot]) {
+            d.maxUpdoot = _comment;
+        }
+        credits[msg.sender] -= amount;
     }
 }
 
