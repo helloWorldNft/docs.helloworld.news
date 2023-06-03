@@ -5,3 +5,6 @@ authors = ["bfantana"]
 language = "en"
 multilingual = false
 src = "src"
+
+[output.html]
+cname = "docs.helloworld.news"
