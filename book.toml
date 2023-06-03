@@ -1,11 +1,7 @@
 [book]
-title = "helloWorldDocs"
+title = "hello world docs | $NEWS"
+description = "Technical documentation for hello world & $NEWS"
+authors = ["bfantana"]
 language = "en"
 multilingual = false
 src = "src"
-
-[output.html]
-default-theme = "navy"
-preferred-dark-theme = "navy"
-git-repository-url = "https://github.com/helloWorldNft/docs.helloworld.news"
-git-repository-icon = "fa-github"

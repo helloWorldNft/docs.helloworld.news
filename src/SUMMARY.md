@@ -1,6 +1,6 @@
 # Summary
 
-[helloWorldDocs](./helloWorldDocs.md)
+[Home](./helloWorldDocs.md)
 
 ---
 

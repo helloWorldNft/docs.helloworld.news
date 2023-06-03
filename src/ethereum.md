@@ -53,18 +53,30 @@ Uniswap v2 NEWS/WETH contract: ```0x0000000000000000000000000000000000000000```
 <br>
 
 ```
-// This is a placeholder contract
-// This is not the NEWS contract
-
-// contracts/NEWSToken.sol
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract NEWSToken is ERC20 {
-    constructor(uint256 initialSupply) public ERC20("News", "NEWS") {
-        _mint(msg.sender, initialSupply);
+
+/**
+ * @dev Implementation of https://eips.ethereum.org/EIPS/eip-20[ERC20] Fungible Token Standard
+ *
+ */
+contract News is ERC20{
+
+    constructor() ERC20("Hello World", "NEWS") {
+        _mint(msg.sender, 9e30);
+    }
+
+    /**
+      * @dev Faucet for testnet users
+      * Must be deleted upon mainnet.
+      *
+      */
+
+    function faucet() public {
+        _mint(msg.sender, 10e18);
     }
 }
 

@@ -43,7 +43,7 @@
 <br>
 <br>
 
-<center><img src="hwlogo.png"  width="360" height="180"></center>
+<center><img src="newspaper-print-wordmark-transparent.png"  width="360" height="180"></center>
 
 <center>welcome to hello world docs</center>
 
