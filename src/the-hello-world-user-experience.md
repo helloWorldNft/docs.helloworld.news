@@ -47,7 +47,7 @@ The hello world user experience is simple and intuitive for any user, with a fam
 If you’ve posted on 4chan and used MetaMask, interacting with the hello world app is second nature.
 #   
 
-![](001.png)
+![](001.jpg)
 
 #   
 
@@ -57,7 +57,7 @@ To view the COMMENTs minted on a headline, simply click the headline and view th
 
 #   
 
-![](002.png)
+![](002.jpg)
 
 #   
 
