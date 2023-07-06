@@ -196,34 +196,22 @@
     }
 </style>
 <p>NEWS is hello world’s native ERC-20 token, issued on Ethereum, where the vast majority of liquidity exists and the vast majority of trading activity occurs.</p>
-<p>NEWS <code>(will be)</code> initially listed on Uniswap v2.</p>
-<p>NEWS token contract: <code>0x0000000000000000000000000000000000000000</code></p>
-<p>Uniswap v2 NEWS/WETH contract: <code>0x0000000000000000000000000000000000000000</code></p>
+<p>NEWS is listed on <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968">Uniswap v3</a></p>
+<p>NEWS token contract: <code>0x7a9d1DC2e94770C28862746BBAb112De29a07683</code></p>
+<p>Uniswap v3 NEWS/ETH pool contract: <code>0x2Ab3CEE9E97f166852EFc493dEAC50F14a7F3968</code></p>
 <br>
 <pre><code>//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import &quot;@openzeppelin/contracts/token/ERC20/ERC20.sol&quot;;
 
-
 /**
  * @dev Implementation of https://eips.ethereum.org/EIPS/eip-20[ERC20] Fungible Token Standard
  *
  */
-contract News is ERC20{
-
-    constructor() ERC20(&quot;Hello World&quot;, &quot;NEWS&quot;) {
-        _mint(msg.sender, 9e30);
-    }
-
-    /**
-      * @dev Faucet for testnet users
-      * Must be deleted upon mainnet.
-      *
-      */
-
-    function faucet() public {
-        _mint(msg.sender, 10e18);
+contract News is ERC20 {
+    constructor() ERC20(&quot;hello world&quot;, &quot;NEWS&quot;) {
+        _mint(msg.sender, 1e27);
     }
 }
 
