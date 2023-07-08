@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="helloWorldDocs.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="abstract.html">hello world whitepaper v1.0</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="abstract.html"><strong aria-hidden="true">1.</strong> Abstract</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li class="chapter-item expanded "><a href="the-hello-world-platform.html"><strong aria-hidden="true">3.</strong> The hello world Platform</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ethereum.html"><strong aria-hidden="true">3.1.</strong> Ethereum</a></li><li class="chapter-item expanded "><a href="polygon.html"><strong aria-hidden="true">3.2.</strong> Polygon</a></li><li class="chapter-item expanded "><a href="the-hello-world-app.html"><strong aria-hidden="true">3.3.</strong> The hello world App</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="gpt.html"><strong aria-hidden="true">3.3.1.</strong> GPT</a></li><li class="chapter-item expanded "><a href="stable-diffusion.html"><strong aria-hidden="true">3.3.2.</strong> Stable Diffusion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="the-hello-world-user-experience.html"><strong aria-hidden="true">4.</strong> The hello world User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="minting-a-comment.html"><strong aria-hidden="true">4.1.</strong> Minting a COMMENT</a></li><li class="chapter-item expanded "><a href="upvoting-a-comment.html"><strong aria-hidden="true">4.2.</strong> Upvoting a COMMENT</a></li></ol></li><li class="chapter-item expanded "><a href="news-tokenomics.html"><strong aria-hidden="true">5.</strong> NEWS Tokenomics</a></li><li class="chapter-item expanded "><a href="links.html"><strong aria-hidden="true">6.</strong> Links</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="helloWorldDocs.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="abstract.html">hello world whitepaper v1.0</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="abstract.html"><strong aria-hidden="true">1.</strong> Abstract</a></li><li class="chapter-item expanded "><a href="background.html"><strong aria-hidden="true">2.</strong> Background</a></li><li class="chapter-item expanded "><a href="the-hello-world-platform.html"><strong aria-hidden="true">3.</strong> The hello world Platform</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ethereum.html"><strong aria-hidden="true">3.1.</strong> Ethereum</a></li><li class="chapter-item expanded "><a href="polygon.html"><strong aria-hidden="true">3.2.</strong> Polygon</a></li><li class="chapter-item expanded "><a href="the-hello-world-dapp.html"><strong aria-hidden="true">3.3.</strong> The hello world dApp</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="gpt.html"><strong aria-hidden="true">3.3.1.</strong> GPT</a></li><li class="chapter-item expanded "><a href="stable-diffusion.html"><strong aria-hidden="true">3.3.2.</strong> Stable Diffusion</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="the-hello-world-user-experience.html"><strong aria-hidden="true">4.</strong> The hello world User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="minting-a-comment.html"><strong aria-hidden="true">4.1.</strong> Minting a COMMENT</a></li><li class="chapter-item expanded "><a href="upvoting-a-comment.html"><strong aria-hidden="true">4.2.</strong> Upvoting a COMMENT</a></li></ol></li><li class="chapter-item expanded "><a href="news-tokenomics.html"><strong aria-hidden="true">5.</strong> NEWS Tokenomics</a></li><li class="chapter-item expanded "><a href="links.html"><strong aria-hidden="true">6.</strong> Links</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -527,9 +527,9 @@
     }
 </style>
 <p>NEWS is hello world’s native ERC-20 token, issued on Ethereum, where the vast majority of liquidity exists and the vast majority of trading activity occurs.</p>
-<p>NEWS is listed on <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968">Uniswap v3</a></p>
+<p>NEWS is listed on <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968" target="_blank" rel="noopener noreferrer">Uniswap v3</a>.</p>
 <p>NEWS token contract: <code>0x7a9d1DC2e94770C28862746BBAb112De29a07683</code></p>
-<p>Uniswap v3 NEWS/ETH pool contract: <code>0x2Ab3CEE9E97f166852EFc493dEAC50F14a7F3968</code></p>
+<p>Uniswap v2 NEWS/WETH contract: <code>0x2Ab3CEE9E97f166852EFc493dEAC50F14a7F3968</code></p>
 <br>
 <pre><code>//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -777,7 +777,7 @@ contract CommentNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
 </code></pre>
 <h4 id="newsmaker-contract"><a class="header" href="#newsmaker-contract">newsMaker Contract</a></h4>
-<p>The newsMaker contract handles various functions for the hello world app.</p>
+<p>The newsMaker contract handles various functions for the hello world dApp.</p>
 <pre><code>//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -881,9 +881,9 @@ contract newsMaker is AccessControl {
         <div class="pagination-nav__sublabel">Previous</div>
         <div class="pagination-nav__label">< Ethereum</div>
     </a>
-    <a class="pagination-nav__link next" href="the-hello-world-app.html">
+    <a class="pagination-nav__link next" href="the-hello-world-dapp.html">
         <div class="pagination-nav__sublabel">Next</div>
-        <div class="pagination-nav__label">App ></div>
+        <div class="pagination-nav__label">dApp ></div>
     </a>
 </div>
 <br>
@@ -892,7 +892,7 @@ contract newsMaker is AccessControl {
 <div class="footnote-definition" id="10"><sup class="footnote-definition-label">1</sup>
 <p><a href="https://bridge.mintnft.today/" target="_blank">https://bridge.mintnft.today/</a></p>
 </div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-app"><a class="header" href="#the-hello-world-app">The hello world App</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-hello-world-dapp"><a class="header" href="#the-hello-world-dapp">The hello world dApp</a></h1>
 <style>
     .pagination-nav {
         display: flex;
@@ -934,7 +934,7 @@ contract newsMaker is AccessControl {
         }
     }
 </style>
-<p>The hello world app leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.</p>
+<p>The hello world dApp leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.</p>
 <br>
 <br>
 <br>
@@ -1002,9 +1002,9 @@ contract newsMaker is AccessControl {
 <br>
 <br></p>
 <div class="pagination-nav">
-    <a class="pagination-nav__link prev" href="the-hello-world-app.html">
+    <a class="pagination-nav__link prev" href="the-hello-world-dapp.html">
         <div class="pagination-nav__sublabel">Previous</div>
-        <div class="pagination-nav__label">< App</div>
+        <div class="pagination-nav__label">< dApp</div>
     </a>
     <a class="pagination-nav__link next" href="stable-diffusion.html">
         <div class="pagination-nav__sublabel">Next</div>
@@ -1124,11 +1124,11 @@ contract newsMaker is AccessControl {
     }
 </style>
 <p>The hello world user experience is simple and intuitive for any user, with a familiar imageboard layout and Web3 integration. </p>
-<p>If you’ve posted on 4chan and used MetaMask, interacting with the hello world app is second nature.</p>
+<p>If you’ve posted on 4chan and used MetaMask, interacting with the hello world dApp is second nature.</p>
 <h1 id=""><a class="header" href="#"></a></h1>
 <p><img src="001.jpg" alt="" /></p>
 <h1 id="-1"><a class="header" href="#-1"></a></h1>
-<p>Users can view the day’s headlines, each a HEADLINE NFT and AI-generated thumbnail, on the app’s main page. </p>
+<p>Users can view the day’s headlines, each a HEADLINE NFT and AI-generated thumbnail, on the dApp’s main page. </p>
 <p>To view the COMMENTs minted on a headline, simply click the headline and view the thread. </p>
 <h1 id="-2"><a class="header" href="#-2"></a></h1>
 <p><img src="002.jpg" alt="" /></p>
@@ -1188,7 +1188,7 @@ contract newsMaker is AccessControl {
         }
     }
 </style>
-<p>Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent in-app are burned on-chain. </p>
+<p>Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent using the dApp are burned on-chain. </p>
 <p>To reply on a thread and mint a COMMENT NFT, make sure your Web3 wallet is connected, then click Comment and enter your reply. </p>
 <p>Users have the option to add a post image of their choice, have the AI generate an image from their text, or post the comment with no image. </p>
 <p>When you’re satisfied with your post, click Mint Comment and approve the mint transaction in your Web3 wallet. COMMENT NFTs are minted to the commenter’s address, and are owned by the commenter. They are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#13">1</a></sup></p>
@@ -1253,7 +1253,7 @@ contract newsMaker is AccessControl {
         }
     }
 </style>
-<p>Upvotes cost 1 NEWS per upvote. All NEWS tokens spent in-app are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.</p>
+<p>Upvotes cost 1 NEWS per upvote. All NEWS tokens spent using the dApp are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.</p>
 <p>The COMMENT on each HEADLINE that has the most upvotes at the end of each 24-hour period is awarded the HEADLINE NFT the COMMENT was minted on. </p>
 <p>HEADLINE NFTs are unique, 1-of-1, AI-generated real-world international news headlines. Each HEADLINE NFT contains a unique AI-generated image which, unlike most NFTs, is contained on the NFT and stored on the blockchain.</p>
 <p>HEADLINE NFTs are transferable, and can be listed on any NFT marketplace that supports Polygon or Ethereum NFTs. <sup class="footnote-reference"><a href="#14">1</a></sup></p>
@@ -1318,19 +1318,18 @@ contract newsMaker is AccessControl {
         }
     }
 </style>
-<p>NEWS token has a total supply of 1 billion tokens.</p>
+<p>The NEWS token contract was deployed on July 5, 2023 [<a href="https://etherscan.io/tx/0xc50c1e61b63e27fd6a6ab69a6f084aab5f6799264895e726aeed622aee7e0ab1" target="_blank" rel="noopener noreferrer">tx</a>].</p>
+<p>The total (max) supply is 1 billion NEWS, all of which are circulating. </p>
+<ul>
+<li>
+<p>90% of supply (900 million NEWS) was pooled in liquidity on Uniswap v3 [<a href="https://etherscan.io/tx/0x4d50ac4254ae56788b972231dd879414d7ad71c0286811d161614a0f3621249b" target="_blank" rel="noopener noreferrer">tx</a>]. The LP position was locked in a lock contract [<a href="https://etherscan.io/address/0x559467c08ff2f1d9f85e7fb379d7f8821545488d#code" target="_blank" rel="noopener noreferrer">link</a>].</p>
+</li>
+<li>
+<p>10% of supply (100 million NEWS) is reserved for CEX Listings, development, and marketing activities. These tokens are held in a multisig safe [<a href="https://etherscan.io/address/0xf9410ce738716451dc5340e692f4a61e886252d3#code" target="_blank" rel="noopener noreferrer">link</a>].</p>
+</li>
+</ul>
+<p>The NEWS token contract is renounced by default, it has no owner or admin role [<a href="https://etherscan.io/token/0x7a9d1dc2e94770c28862746bbab112de29a07683#code" target="_blank" rel="noopener noreferrer">link</a>].</p>
 <br>
-<pre><code>// Token allocation TBA
-
-
-
-
-
-
-
-
-
-</code></pre>
 <br>
 <br>
 <br>
@@ -1385,12 +1384,14 @@ contract newsMaker is AccessControl {
         }
     }
 </style>
-<p>Website: <a href="https://helloworld.news">https://helloworld.news</a></p>
-<p>Twitter: <a href="https://twitter.com/helloWorldNft">https://twitter.com/helloWorldNft</a></p>
-<p>Telegram: <a href="https://t.me/helloWorldNft">https://t.me/helloWorldNft</a></p>
-<p>Medium: <a href="https://medium.com/@helloWorldNft">https://medium.com/@helloWorldNft</a></p>
-<p>GitHub: <a href="https://github.com/helloWorldNft">https://github.com/helloWorldNft</a></p>
-<p>Contact: <a href="mailto:hello@helloworld.news">hello@helloworld.news</a></p>
+<p>Website | <a href="https://helloworld.news" target="_blank" rel="noopener noreferrer">https://helloworld.news</a></p>
+<p>Twitter | <a href="https://twitter.com/helloWorldNft" target="_blank" rel="noopener noreferrer">https://twitter.com/helloWorldNft</a></p>
+<p>Threads | <a href="https://www.threads.net/@helloworlddotnews" target="_blank" rel="noopener noreferrer">https://www.threads.net/@helloworlddotnews</a></p>
+<p>Telegram | <a href="https://t.me/helloWorldNft" target="_blank" rel="noopener noreferrer">https://t.me/helloWorldNft</a></p>
+<p>Blog | <a href="https://mirror.xyz/helloworldnews.eth" target="_blank" rel="noopener noreferrer">https://mirror.xyz/helloworldnews.eth</a></p>
+<p>GitHub | <a href="https://github.com/helloWorldNft" target="_blank" rel="noopener noreferrer">https://github.com/helloWorldNft</a></p>
+<p>Contact | <a href="mailto:hello@helloworld.news" target="_blank" rel="noopener noreferrer">hello@helloworld.news</a></p>
+<p>Uniswap | <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968" target="_blank" rel="noopener noreferrer">https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968</a></p>
 <br>
 <br>
 <br>

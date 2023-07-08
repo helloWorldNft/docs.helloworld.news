@@ -42,7 +42,7 @@
     }
 </style>
 
-Upvotes cost 1 NEWS per upvote. All NEWS tokens spent in-app are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.
+Upvotes cost 1 NEWS per upvote. All NEWS tokens spent using the dApp are burned on-chain. Users can upvote any comment they like, whether another user’s or their own.
 
 The COMMENT on each HEADLINE that has the most upvotes at the end of each 24-hour period is awarded the HEADLINE NFT the COMMENT was minted on. 
 

@@ -18,7 +18,7 @@
 
     - [Polygon](./polygon.md)
 
-    - [The hello world App](./the-hello-world-app.md)
+    - [The hello world dApp](./the-hello-world-dapp.md)
 
         - [GPT](./gpt.md)
 

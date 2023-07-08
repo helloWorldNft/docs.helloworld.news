@@ -44,11 +44,11 @@
 
 NEWS is hello world’s native ERC-20 token, issued on Ethereum, where the vast majority of liquidity exists and the vast majority of trading activity occurs.  
 
-NEWS ```(will be)``` initially listed on Uniswap v2.
+NEWS is listed on <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968" target="_blank" rel="noopener noreferrer">Uniswap v3</a>.
 
-NEWS token contract: ```0x0000000000000000000000000000000000000000```
+NEWS token contract: ```0x7a9d1DC2e94770C28862746BBAb112De29a07683```
 
-Uniswap v2 NEWS/WETH contract: ```0x0000000000000000000000000000000000000000```
+Uniswap v2 NEWS/WETH contract: ```0x2Ab3CEE9E97f166852EFc493dEAC50F14a7F3968```
 
 <br>
 
@@ -58,25 +58,13 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-
 /**
  * @dev Implementation of https://eips.ethereum.org/EIPS/eip-20[ERC20] Fungible Token Standard
  *
  */
-contract News is ERC20{
-
-    constructor() ERC20("Hello World", "NEWS") {
-        _mint(msg.sender, 9e30);
-    }
-
-    /**
-      * @dev Faucet for testnet users
-      * Must be deleted upon mainnet.
-      *
-      */
-
-    function faucet() public {
-        _mint(msg.sender, 10e18);
+contract News is ERC20 {
+    constructor() ERC20("hello world", "NEWS") {
+        _mint(msg.sender, 1e27);
     }
 }
 

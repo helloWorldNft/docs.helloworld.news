@@ -226,7 +226,7 @@ contract CommentNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 ````
 #### newsMaker Contract
 
-The newsMaker contract handles various functions for the hello world app.
+The newsMaker contract handles various functions for the hello world dApp.
 
 ````
 //SPDX-License-Identifier: MIT
@@ -335,9 +335,9 @@ contract newsMaker is AccessControl {
         <div class="pagination-nav__sublabel">Previous</div>
         <div class="pagination-nav__label">< Ethereum</div>
     </a>
-    <a class="pagination-nav__link next" href="the-hello-world-app.md">
+    <a class="pagination-nav__link next" href="the-hello-world-dapp.md">
         <div class="pagination-nav__sublabel">Next</div>
-        <div class="pagination-nav__label">App ></div>
+        <div class="pagination-nav__label">dApp ></div>
     </a>
 </div>
 

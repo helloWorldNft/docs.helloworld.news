@@ -1,4 +1,4 @@
-# The hello world App
+# The hello world dApp
 
 <style>
     .pagination-nav {
@@ -42,7 +42,7 @@
     }
 </style>
 
-The hello world app leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.
+The hello world dApp leverages two of the world's most advanced large language models (LLMs) to generate the headlines and images minted on HEADLINE NFTs, as well as the images minted on COMMENT NFTs if the user chooses to use an AI-generated image.
 
 
 <br>

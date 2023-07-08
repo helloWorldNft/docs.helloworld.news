@@ -50,9 +50,9 @@ Once a day, hello world’s GPT agent retrieves and processes headlines from a v
 <br>
 
 <div class="pagination-nav">
-    <a class="pagination-nav__link prev" href="the-hello-world-app.md">
+    <a class="pagination-nav__link prev" href="the-hello-world-dapp.md">
         <div class="pagination-nav__sublabel">Previous</div>
-        <div class="pagination-nav__label">< App</div>
+        <div class="pagination-nav__label">< dApp</div>
     </a>
     <a class="pagination-nav__link next" href="stable-diffusion.md">
         <div class="pagination-nav__sublabel">Next</div>

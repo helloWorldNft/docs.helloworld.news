@@ -42,22 +42,31 @@
     }
 </style>
 
-Website: <https://helloworld.news>
+
+Website | <a href="https://helloworld.news" target="_blank" rel="noopener noreferrer">https://helloworld.news</a>
 
 
-Twitter: <https://twitter.com/helloWorldNft>
+Twitter | <a href="https://twitter.com/helloWorldNft" target="_blank" rel="noopener noreferrer">https://twitter.com/helloWorldNft</a>
 
 
-Telegram: <https://t.me/helloWorldNft>
+Threads | <a href="https://www.threads.net/@helloworlddotnews" target="_blank" rel="noopener noreferrer">https://www.threads.net/@helloworlddotnews</a>
 
 
-Medium: <https://medium.com/@helloWorldNft>
+Telegram | <a href="https://t.me/helloWorldNft" target="_blank" rel="noopener noreferrer">https://t.me/helloWorldNft</a>
 
 
-GitHub: <https://github.com/helloWorldNft>
+Blog | <a href="https://mirror.xyz/helloworldnews.eth" target="_blank" rel="noopener noreferrer">https://mirror.xyz/helloworldnews.eth</a>
 
 
-Contact: <hello@helloworld.news>
+GitHub | <a href="https://github.com/helloWorldNft" target="_blank" rel="noopener noreferrer">https://github.com/helloWorldNft</a>
+
+
+Contact | <a href="mailto:hello@helloworld.news" target="_blank" rel="noopener noreferrer">hello@helloworld.news</a>
+
+
+Uniswap | <a href="https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968" target="_blank" rel="noopener noreferrer">https://info.uniswap.org/#/pools/0x2ab3cee9e97f166852efc493deac50f14a7f3968</a>
+
+
 
 
 <br>

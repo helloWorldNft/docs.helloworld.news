@@ -42,7 +42,7 @@
     }
 </style>
 
-Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent in-app are burned on-chain. 
+Minting a COMMENT NFT costs 10 NEWS. All NEWS tokens spent using the dApp are burned on-chain. 
 
 To reply on a thread and mint a COMMENT NFT, make sure your Web3 wallet is connected, then click Comment and enter your reply. 
 

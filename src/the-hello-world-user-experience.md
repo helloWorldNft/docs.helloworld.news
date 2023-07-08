@@ -44,14 +44,14 @@
 
 The hello world user experience is simple and intuitive for any user, with a familiar imageboard layout and Web3 integration. 
 
-If you’ve posted on 4chan and used MetaMask, interacting with the hello world app is second nature.
+If you’ve posted on 4chan and used MetaMask, interacting with the hello world dApp is second nature.
 #   
 
 ![](001.jpg)
 
 #   
 
-Users can view the day’s headlines, each a HEADLINE NFT and AI-generated thumbnail, on the app’s main page. 
+Users can view the day’s headlines, each a HEADLINE NFT and AI-generated thumbnail, on the dApp’s main page. 
 
 To view the COMMENTs minted on a headline, simply click the headline and view the thread. 
 
