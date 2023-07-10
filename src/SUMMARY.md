@@ -33,3 +33,5 @@
 - [NEWS Tokenomics](./news-tokenomics.md)
 
 - [Links](./links.md)
+
+- [Brand Assets](./brand-assets.md)

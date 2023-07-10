@@ -57,9 +57,9 @@
         <div class="pagination-nav__sublabel">hello world</div>
         <div class="pagination-nav__label">whitepaper</div>
     </a>
-    <a class="pagination-nav__link prev" href="https://helloworld.news">
+    <a class="pagination-nav__link prev" href="brand-assets.md">
         <div class="pagination-nav__sublabel">hello world</div>
-        <div class="pagination-nav__label">website</div>
+        <div class="pagination-nav__label">brand assets</div>
     </a>    
     </div>
 <div class="pagination-nav">
