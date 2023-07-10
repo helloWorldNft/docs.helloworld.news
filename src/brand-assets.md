@@ -74,4 +74,4 @@
 
 ## Usage Guidelines
 
-Use as you please.
+Use as you please mmkay.
