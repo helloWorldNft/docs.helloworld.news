@@ -57,15 +57,15 @@
         <div class="pagination-nav__sublabel">hello world</div>
         <div class="pagination-nav__label">whitepaper</div>
     </a>
-    <a class="pagination-nav__link prev" href="brand-assets.md">
+    <a class="pagination-nav__link prev" href="https://helloworld.news" target="_blank">
         <div class="pagination-nav__sublabel">hello world</div>
-        <div class="pagination-nav__label">brand assets</div>
+        <div class="pagination-nav__label">website</div>
     </a>    
     </div>
 <div class="pagination-nav">
-    <a class="pagination-nav__link prev" href="https://t.me/helloWorldNft">
+    <a class="pagination-nav__link prev" href="brand-assets.md">
         <div class="pagination-nav__sublabel">hello world</div>
-        <div class="pagination-nav__label">telegram</div>
+        <div class="pagination-nav__label">brand assets</div>
     </a>
     <a class="pagination-nav__link next" href="links.md">
         <div class="pagination-nav__sublabel">more useful</div>
